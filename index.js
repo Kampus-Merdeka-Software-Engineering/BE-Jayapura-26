@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended: false})); // supaya bisa menerima body
 app.use('/',mainRouter);
 
 
-const port = 3000
+const port = process.env.MYSQLPORT
 app.listen(port, function(){
     console.log("Server start on", port)
     connection.authenticate()
