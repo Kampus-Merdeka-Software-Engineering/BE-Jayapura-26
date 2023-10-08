@@ -15,8 +15,8 @@ app.use(express.urlencoded({extended: false})); // supaya bisa menerima body
 app.use('/',mainRouter);
 
 
-const port = 3000
-app.listen(port, function(){
+const port = process.env.PORT || 3000
+app.listen(port,"0.0.0.0", function(){
     console.log("Server start on", port)
     connection.authenticate()
     .then(function(){
