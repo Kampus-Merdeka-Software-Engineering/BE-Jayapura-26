@@ -6,7 +6,7 @@ function rateLimiter(request, response, next) {
     console.log(alamat)
     if(request.ip) {
         alamat[request.ip]++
-        if(alamat[request.ip] >= 50) {
+        if(alamat[request.ip] >= 100) {
             response.json({
                 message: "ANDA BERUSAHA DDOS!"
             })
